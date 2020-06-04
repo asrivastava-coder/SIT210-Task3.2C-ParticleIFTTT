@@ -1,0 +1,33 @@
+int led1 = D7; 
+int photoresistor = A0;
+int digitalValue;
+int analogValue = 0;
+
+
+
+void setup() {
+
+  
+  Particle.variable("Sunlight is there", &digitalValue, INT);
+  Particle.variable("Sunlight is there", &photoresistor, INT);
+  pinMode(led1, OUTPUT);
+  
+  pinMode(photoresistor,INPUT);
+
+}
+
+
+void loop() {
+  
+  analogValue = analogRead(photoresistor);
+ 
+ if (analogValue = (19)){
+     digitalWrite(led1,HIGH);
+     
+ }
+ else{
+     digitalWrite(led1,LOW);
+     
+ }
+
+}
